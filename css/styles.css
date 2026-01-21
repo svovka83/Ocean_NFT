@@ -1,5 +1,6 @@
 :root {
-  --mobile-size: 425px;
+  --mobile: 375px;
+  --bg-body: #01204C;
 }
 
 html {
@@ -14,7 +15,7 @@ body {
   font-family: 'Rajdhani', system-ui, sans-serif;
   font-weight: 400;
   color: #FFFFFF;
-  background: #01204C;
+  background: var(--bg-body);
   padding-top: 42px;
 }
 
@@ -981,7 +982,8 @@ ul {
   }
 }
 
-@media (max-width: var(--mobile-size, 375px)) {
+/* 375px */
+@media (max-width: 450px) {
   .title-group__title--normal {
     font-size: 16px;
     margin-bottom: 16px;
@@ -1308,14 +1310,15 @@ ul {
   }
 }
 
-@media (min-width:376px) and (max-width:768px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .card-group {
     grid-template-columns: 1fr;
     row-gap: 25px;
   }
 }
 
-@media (max-width:var(--mobile-size, 375px)) {
+/* 375px */
+@media (max-width: 450px) {
   .card-group {
     margin-left: 4px;
     margin-bottom: 26px;
@@ -2064,7 +2067,8 @@ ul {
   display: none;
 }
 
-@media (max-width: var(--mobile-size, 375px)) {
+/* 375px */
+@media (max-width: 450px) {
   .footer {
     margin-bottom: 0;
   }
