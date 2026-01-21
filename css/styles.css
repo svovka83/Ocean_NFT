@@ -1,3 +1,7 @@
+:root {
+  --mobile-size: 425px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -977,7 +981,7 @@ ul {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: var(--mobile-size, 375px)) {
   .title-group__title--normal {
     font-size: 16px;
     margin-bottom: 16px;
@@ -1311,7 +1315,7 @@ ul {
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:var(--mobile-size, 375px)) {
   .card-group {
     margin-left: 4px;
     margin-bottom: 26px;
@@ -2060,7 +2064,7 @@ ul {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: var(--mobile-size, 375px)) {
   .footer {
     margin-bottom: 0;
   }
