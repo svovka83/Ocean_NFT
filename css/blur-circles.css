@@ -1,0 +1,33 @@
+:root {
+  --blur-circle: blur(120px);
+}
+
+.blur-circle-pink {
+  width: 8vw;
+  height: 8vh;
+  background-image: url("../images/blur-circles/circle-pink.png");
+  position: absolute;
+  transform: translateX(-4vw);
+  filter: var(--blur-circle);
+  z-index: -1;
+}
+
+.blur-circle-rose {
+  width: 14vw;
+  height: 14vh;
+  background-image: url("../images/blur-circles/circle-rose.png");
+  position: absolute;
+  transform: translateX(-7vw);
+  filter: var(--blur-circle);
+  z-index: -1;
+}
+
+.blur-circle-blue {
+  width: 14vw;
+  height: 14vh;
+  background-image: url("../images/blur-circles/circle-blue.png");
+  position: absolute;
+  transform: translateX(-7vw);
+  filter: var(--blur-circle);
+  z-index: -1;
+}
