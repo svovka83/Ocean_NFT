@@ -1,60 +1,73 @@
-// swiper code
-
-const cardGroupSwiper1 = document.getElementById("card-group-1");
-const swiperWraper1 = document.getElementById("swiper-wrapper-1");
-const cardUser1 = document.getElementById("user-card-1");
-const cardUser2 = document.getElementById("user-card-2");
-const cardUser3 = document.getElementById("user-card-3");
-
-const cardGroupSwiper2 = document.getElementById("card-group-2");
-const swiperWraper2 = document.getElementById("swiper-wrapper-2");
-const cardUser4 = document.getElementById("user-card-4");
-const cardUser5 = document.getElementById("user-card-5");
-const cardUser6 = document.getElementById("user-card-6");
-
 const width = window.innerWidth;
 
-console.log(width);
-// here should be 375px of viewport insted of 610px - this is only for mobile view demonstration on desktop !!!
-if (width <= 610) {
-	swiperWraper1.classList.remove("card-group-0");
-	cardGroupSwiper1.classList.add("card-group-0");
+// swiper code
+let amountSlides;
+let space;
 
-	cardGroupSwiper1.classList.add("swiper");
-	swiperWraper1.classList.add("swiper-wrapper");
-	cardUser1.classList.add("swiper-slide");
-	cardUser2.classList.add("swiper-slide");
-	cardUser3.classList.add("swiper-slide");
-	cardUser1.classList.add("swiper__padding");
-	cardUser2.classList.add("swiper__padding");
-	cardUser3.classList.add("swiper__padding");
-
-	swiperWraper2.classList.remove("card-group");
-	cardGroupSwiper2.classList.add("card-group");
-
-	cardGroupSwiper2.classList.add("swiper");
-	swiperWraper2.classList.add("swiper-wrapper");
-	cardUser4.classList.add("swiper-slide");
-	cardUser5.classList.add("swiper-slide");
-	cardUser6.classList.add("swiper-slide");
-	cardUser4.classList.add("swiper__padding");
-	cardUser5.classList.add("swiper__padding");
-	cardUser6.classList.add("swiper__padding");
-
-	new Swiper(".card-group-0", {
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next-1",
-		},
-	});
-
-	new Swiper(".card-group", {
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next-2",
-		},
-	});
+if (width > 1440) {
+	amountSlides = 3;
+	space = 35;
+} else if (width <= 1440 && width > 1024) {
+	amountSlides = 2;
+	space = 74;
+} else if (width <= 1024 && width > 768) {
+	amountSlides = 2;
+	space = 38;
+} else if (width <= 768 && width > 375) {
+	amountSlides = 1;
+	space = 25;
+} else if (width <= 375) {
+	amountSlides = 1;
+	space = 15;
 }
+
+console.log(width, amountSlides);
+
+new Swiper(".card-group-0", {
+	loop: true,
+	slidesPerView: amountSlides,
+	spaceBetween: space,
+	touchRatio: 1.5,
+	grabCursor: true,
+
+	navigation: {
+		nextEl: ".swiper-button-desc-1",
+	},
+});
+
+new Swiper(".card-group", {
+	loop: true,
+	slidesPerView: amountSlides,
+	spaceBetween: space,
+	touchRatio: 1.5,
+	grabCursor: true,
+
+	navigation: {
+		nextEl: ".swiper-button-desc-2",
+	},
+});
+
+const moveCartBtn1 = document.querySelector(".title-group__button.button-1");
+const moveCartBtn1_mob = document.querySelector(".swiper-button-next-1.user-card__button");
+const refBtn1 = document.querySelector(".swiper-button-desc-1");
+
+moveCartBtn1.addEventListener("click", () => {
+	refBtn1.click();
+});
+moveCartBtn1_mob.addEventListener("click", () => {
+	refBtn1.click();
+});
+
+const moveCartBtn2 = document.querySelector(".title-group__button.button-2");
+const moveCartBtn2_mob = document.querySelector(".swiper-button-next-2.user-card__button");
+const refBtn2 = document.querySelector(".swiper-button-desc-2");
+
+moveCartBtn2.addEventListener("click", () => {
+	refBtn2.click();
+});
+moveCartBtn2_mob.addEventListener("click", () => {
+	refBtn2.click();
+});
 
 // show burger menu
 
@@ -82,9 +95,9 @@ btnExplore.addEventListener("click", () => {
 	showUsers = !showUsers;
 
 	if (showUsers) {
-		btnExplore.textContent = "Explore All";
+		btnExplore.textContent = "Explore";
 	} else {
-		btnExplore.textContent = "Hide All";
+		btnExplore.textContent = "Hide";
 	}
 });
 
@@ -243,6 +256,14 @@ exploreBtn8.addEventListener("click", () => {
 	});
 	exploreBtn8.classList.add("collection-list__link--active");
 });
+
+// top sellers button
+
+const topSellersBtn = document.querySelector(".top-sellers__explore-all.user-card__button");
+
+if (width > 375) {
+	topSellersBtn.classList.add("gradient-link");
+}
 
 // Happy Christmas colorful background blur circles implementation
 
