@@ -2377,6 +2377,8 @@ body::before {
     display: none;
     flex-direction: column;
     row-gap: 14px;
+    animation-name: footer-items;
+    animation-duration: 2s;
   }
 
   .footer-list__item {
@@ -2410,3 +2412,15 @@ body::before {
 }
 
 /* footer section end */
+
+@keyframes footer-items {
+  0% {
+    transform: translateX(30%) rotateY(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%) rotateY(0deg);
+    opacity: 1;
+  }
+}

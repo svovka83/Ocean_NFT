@@ -108,7 +108,7 @@ const dropDownList1 = document.querySelector(".footer-list.list-group__item:nth-
 const dropDownIcon1 = document.querySelector(".list-group__item:nth-child(1)");
 
 kindOfBtn1.addEventListener("click", () => {
-	if (width <= 610) {
+	if (width <= 375) {
 		if (dropDownList1.style.display === "none") {
 			dropDownList1.style.display = "block";
 			dropDownIcon1.classList.add("arrow-up");
@@ -124,7 +124,7 @@ const dropDownList2 = document.querySelector(".footer-list.list-group__item:nth-
 const dropDownIcon2 = document.querySelector(".list-group__item:nth-child(2)");
 
 kindOfBtn2.addEventListener("click", () => {
-	if (width <= 610) {
+	if (width <= 375) {
 		if (dropDownList2.style.display === "none") {
 			dropDownList2.style.display = "block";
 			dropDownIcon2.classList.add("arrow-up");
@@ -140,7 +140,7 @@ const dropDownList3 = document.querySelector(".footer-list.list-group__item:nth-
 const dropDownIcon3 = document.querySelector(".list-group__item:nth-child(3)");
 
 kindOfBtn3.addEventListener("click", () => {
-	if (width <= 610) {
+	if (width <= 375) {
 		if (dropDownList3.style.display === "none") {
 			dropDownList3.style.display = "block";
 			dropDownIcon3.classList.add("arrow-up");
@@ -156,7 +156,7 @@ const dropDownList4 = document.querySelector(".footer-list.list-group__item:nth-
 const dropDownIcon4 = document.querySelector(".list-group__item:nth-child(4)");
 
 kindOfBtn4.addEventListener("click", () => {
-	if (width <= 610) {
+	if (width <= 375) {
 		if (dropDownList4.style.display === "none") {
 			dropDownList4.style.display = "block";
 			dropDownIcon4.classList.add("arrow-up");
@@ -172,7 +172,7 @@ const dropDownList5 = document.querySelector(".footer-list.list-group__item:nth-
 const dropDownIcon5 = document.querySelector(".list-group__item:nth-child(5)");
 
 kindOfBtn5.addEventListener("click", () => {
-	if (width <= 610) {
+	if (width <= 375) {
 		if (dropDownList5.style.display === "none") {
 			dropDownList5.style.display = "block";
 			dropDownIcon5.classList.add("arrow-up");
